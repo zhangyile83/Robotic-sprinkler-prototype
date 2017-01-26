@@ -1,5 +1,5 @@
-function dy = drop(t,y)
-d = 0.010;
+function dy = drop(t, y, d)
+% d = 0.02;
 g=9.8; % gravitation constant
 fai=0.18; % fai is a constant related to the Reynolds number
 

@@ -1,7 +1,5 @@
-function dy = droplet_wind_Modi(t, y, d)
+function dy = droplet_wind_Modi(t, y, d, w, beta)
 % droplet function with different droplet diameter
-
-
 g=9.8; % gravitation constant
 fai=0.18; % fai is a constant related to the Reynolds number
 
@@ -10,11 +8,8 @@ pw=1000; % pw is the water density
 m=pi/6*pw*d^3; % mass of the droplet
 k=fai*pa*d^2; % friction constant
 
-
-w = 4.92;  % The unit is m/s
-beta = pi/2 + pi/6; % try pi and pi/6
-wx = w * cos(beta);
-wy = w * sin(beta);
+wx = w * cosd(beta);
+wy = w * sind(beta);
 
 
 dy = zeros(3,1);    % a column vector

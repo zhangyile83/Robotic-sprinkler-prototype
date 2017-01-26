@@ -1,7 +1,5 @@
 function dy = droplet_wind(t,y)
-
 load Diameter;
-
 g=9.8; % gravitation constant
 fai=0.18; % fai is a constant related to the Reynolds number
 
@@ -13,8 +11,8 @@ k=fai*pa*d^2; % friction constant
 
 w = 3;
 beta = pi;
-wx = w * cos(beta);
-wy = w * sin(beta);
+wx = w * cosd(beta);
+wy = w * sind(beta);
 
 
 dy = zeros(3,1);    % a column vector
